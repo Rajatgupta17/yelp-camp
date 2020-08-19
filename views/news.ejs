@@ -1,0 +1,31 @@
+<%- include("partials/header"); %>
+
+		<div class="container" style="width: 550px; margin-top: 6%; border: 4px solid grey; padding: 25px; border-radius: 5px;">
+		<h1 style="color: grey;">
+	Create New Campground
+</h1>
+
+<form action="/campgrounds" method="POST">
+	<div class="form-group">
+	  <label for="exampleInputEmail1">Name</label>
+	  <input type="text" name="name" placeholder="Name Goes Here" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+	  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+	</div>
+	<div class="form-group">
+		<label for="exampleInputPassword1">Price</label>
+		<input type="number" name="Price" class="form-control" placeholder="price" id="exampleInputPassword1" min="0.1" step="0.1">
+	  </div>
+	<div class="form-group">
+	  <label for="exampleInputPassword1">Image URL</label>
+	  <input type="text" name="image" class="form-control" placeholder="Image Goes Here" id="exampleInputPassword1">
+	</div>
+	<div class="form-group">
+		<label for="exampleFormControlTextarea1">Description</label>
+		<textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+	  </div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<%- include("partials/footer") %>
+
+	

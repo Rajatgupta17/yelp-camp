@@ -1,0 +1,19 @@
+<%- include("partials/header"); %>
+
+		<div class="container" style="width: 550px; margin-top: 10%; border: 4px solid grey; padding: 25px; border-radius: 5px;">
+		<h1 style="color: grey;">
+	Edit Comment
+</h1>
+
+<form action="/campgrounds/<%=campground_id%>/comments/<%=comment._id %>?_method=PUT" method="POST">
+	<div class="form-group">
+	  <label for="exampleInputEmail1">Text</label>
+	  <input type="text" name="comment[text]" value="<%= comment.text %>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+	  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<%- include("partials/footer") %>
+
+	

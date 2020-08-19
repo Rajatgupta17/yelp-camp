@@ -1,0 +1,32 @@
+
+
+<!-- <h1>LogIn Page</h1>
+<form action="/login", method="POSt">
+<input type="text" name="username" placeholder="User Name">
+<input type="password" name="password" placeholder="Password">
+<input type="submit" value="Login">
+</form> -->
+<%- include("partials/header"); %>
+
+		<div class="container" style="width: 550px; margin-top: 10%; border: 4px solid grey; padding: 25px; border-radius: 5px;">
+		<h1 style="color: grey;">
+	Log In 
+</h1>
+
+<form action="/login" method="POST">
+	<div class="form-group">
+	  <label for="exampleInputEmail1">User Name</label>
+	  <input type="text" name="username" placeholder="User Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+	  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+	</div>
+	<div class="form-group">
+	  <label for="exampleInputPassword1">Password</label>
+	  <input type="password" name="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
+	</div>
+	<button type="submit" class="btn btn-primary">Log In</button>
+  </form>
+</div>
+<%- include("partials/footer") %>
+
+	
+
