@@ -13,7 +13,7 @@
         <div class="img-thumbnail">
             <img src="<%= campgrounding.image %>" class="img-responsive" style="width: 100%; height: 500px;"> 
             <div class="caption-full">
-                <h5 class="float-right">$<%= campgrounding.price %>/night</h5>
+                <h5 class="float-right">Rs. <%= 1500%>/night</h5>
                 <h5><%= campgrounding.name %></h5>
                 <p><%= campgrounding.description %></p>
                 <p><em>Submitted by:- <%= campgrounding.author.username %></em></p>
@@ -23,7 +23,7 @@
                 <form id="delete-form" action="/campgrounds/<%=campgrounding._id%>?_method=DELETE" method="POST">
                 <button class="btn btn-danger">Delete</button>
                 </form>
-                <% }%>
+                <% } %>
            
             </div>
         </div>

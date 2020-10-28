@@ -13,7 +13,7 @@ var seedDB=require("./seed");
 app.set("view engine", "ejs");
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"));
-mongoose.connect("mongodb://localhost/yelp_camp", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://rajat456bansal:Rajat%401705@cluster0-w5iyn.mongodb.net/", {dbName: 'yelp_camp', useNewUrlParser: true, useUnifiedTopology: true});
 // seedDB();
 
 app.use(require("express-session")({
