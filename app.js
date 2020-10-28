@@ -13,6 +13,8 @@ var seedDB=require("./seed");
 app.set("view engine", "ejs");
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"));
+const PORT=process.env.PORT || 3000;
+
 mongoose.connect("mongodb+srv://rajat456bansal:Rajat%401705@cluster0-w5iyn.mongodb.net/", {dbName: 'yelp_camp', useNewUrlParser: true, useUnifiedTopology: true});
 // seedDB();
 
@@ -256,6 +258,6 @@ function checkCommentAuthorization(req, res, next){
 		res.redirect("back");
 	}	
 }
-app.listen(3000, ()=>{
+app.listen(PORT, ()=>{
 	console.log("The Yelp Camp Server has started");
 });
