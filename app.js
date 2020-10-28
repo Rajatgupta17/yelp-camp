@@ -15,7 +15,7 @@ app.use(bodyparser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"));
 const PORT=process.env.PORT || 3000;
 
-mongoose.connect("mongodb+srv://rajat456bansal:Rajat%401705@cluster0-w5iyn.mongodb.net/", {dbName: 'yelp_camp', useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://rajat456bansal:*******@cluster0-w5iyn.mongodb.net/", {dbName: 'yelp_camp', useNewUrlParser: true, useUnifiedTopology: true});
 // seedDB();
 
 app.use(require("express-session")({
